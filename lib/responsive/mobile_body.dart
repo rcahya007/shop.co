@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:shop_co/common/global_data.dart';
 import 'package:shop_co/common/widgets/action_button.dart';
@@ -36,8 +37,10 @@ class MyMobileBody extends StatelessWidget {
                       SizedBox(
                         width: 315,
                         height: 93,
-                        child: Text(
+                        child: AutoSizeText(
                           'FIND CLOTHES THAT MATCHES YOUR STYLE',
+                          minFontSize: 36,
+                          maxFontSize: 50,
                           style: integralBold.copyWith(
                             fontSize: 36,
                             height: 0.85,
@@ -154,12 +157,63 @@ class MyMobileBody extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Image.asset('assets/images/modelPerson.png'),
-                      const SizedBox(
-                        height: 50,
+                      Center(
+                        child: Image.asset(
+                          'assets/images/modelPerson.png',
+                          height: 448,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ],
                   ),
+                ),
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                padding: const EdgeInsets.symmetric(
+                  vertical: 16,
+                  horizontal: 39,
+                ),
+                decoration: BoxDecoration(
+                  color: colorBlack,
+                ),
+                child: Wrap(
+                  runSpacing: 22.75,
+                  alignment: WrapAlignment.center,
+                  children: [
+                    Image.asset(
+                      'assets/images/versace_logo.png',
+                      height: 23.25,
+                    ),
+                    const SizedBox(
+                      width: 34,
+                    ),
+                    Image.asset(
+                      'assets/images/zara_logo.png',
+                      height: 26.65,
+                    ),
+                    const SizedBox(
+                      width: 34,
+                    ),
+                    Image.asset(
+                      'assets/images/gucci_logo.png',
+                      height: 25.24,
+                    ),
+                    const SizedBox(
+                      width: 34,
+                    ),
+                    Image.asset(
+                      'assets/images/prada_logo.png',
+                      height: 21,
+                    ),
+                    const SizedBox(
+                      width: 34,
+                    ),
+                    Image.asset(
+                      'assets/images/calvin_klein_logo.png',
+                      height: 21.75,
+                    ),
+                  ],
                 ),
               ),
             ],

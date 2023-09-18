@@ -16,36 +16,39 @@ class BannerDisc extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: colorBlack,
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: 9,
+    return AspectRatio(
+      aspectRatio: 16 / 2,
+      child: Container(
+        decoration: BoxDecoration(
+          color: colorBlack,
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              text ?? '',
-              style: satoshiRegular.copyWith(
-                color: colorWhite,
-                fontSize: 12,
-              ),
-            ),
-            TextButton(
-              onPressed: ontap,
-              child: Text(
-                textPres ?? '',
-                style: satoshiBold.copyWith(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            vertical: 9,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                text ?? '',
+                style: satoshiRegular.copyWith(
                   color: colorWhite,
-                  decoration: TextDecoration.underline,
                   fontSize: 12,
                 ),
               ),
-            )
-          ],
+              TextButton(
+                onPressed: ontap,
+                child: Text(
+                  textPres ?? '',
+                  style: satoshiBold.copyWith(
+                    color: colorWhite,
+                    decoration: TextDecoration.underline,
+                    fontSize: 12,
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

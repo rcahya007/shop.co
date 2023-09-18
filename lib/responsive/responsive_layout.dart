@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+
 import 'package:shop_co/responsive/dimensions.dart';
 
 class ResponsiveLayout extends StatelessWidget {
   final Widget mobileBody;
+  final Widget tabletBody;
   final Widget desktopBody;
 
   const ResponsiveLayout({
-    super.key,
+    Key? key,
     required this.mobileBody,
+    required this.tabletBody,
     required this.desktopBody,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +20,8 @@ class ResponsiveLayout extends StatelessWidget {
       builder: (context, constraints) {
         if (constraints.maxWidth < mobileWidth) {
           return mobileBody;
+        } else if (constraints.maxWidth < tabletWidth) {
+          return tabletBody;
         } else {
           return desktopBody;
         }
