@@ -1,43 +1,88 @@
 import 'package:flutter/material.dart';
 import 'package:shop_co/common/global_data.dart';
+import 'package:shop_co/responsive/dimensions.dart';
 
 class Navbar extends StatelessWidget {
   const Navbar({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var mediaSize = MediaQuery.of(context).size.width;
     return Container(
       color: Colors.white,
       height: 64,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 16,
-        ),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Center(
-              child: Icon(
-                Icons.menu,
-                size: 30,
+      alignment: Alignment.center,
+      child: SizedBox(
+        width: 1240,
+        height: double.infinity,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Row(
+            children: [
+              mediaSize < mobileWidth
+                  ? const Icon(
+                      Icons.menu_rounded,
+                      size: 24,
+                    )
+                  : const SizedBox(),
+              SizedBox(
+                width: mediaSize < mobileWidth ? 16 : 0,
               ),
-            ),
-            const SizedBox(
-              width: 16,
-            ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 13),
-                child: Text(
-                  'SHOP.CO',
-                  style: integralBold.copyWith(
-                    fontSize: 25.2,
-                  ),
+              Expanded(
+                child: Row(
+                  children: [
+                    Text(
+                      "SHOP.CO",
+                      style: integralBold.copyWith(
+                        fontSize: 25.2,
+                      ),
+                    ),
+                    SizedBox(
+                      width: mediaSize < mobileWidth ? 20 : 10,
+                    ),
+                    mediaSize < mobileWidth
+                        ? const SizedBox()
+                        : Row(
+                            children: [
+                              Text(
+                                'Shop',
+                                style: satoshiRegular.copyWith(
+                                  fontSize: 14,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                'On Sale',
+                                style: satoshiRegular.copyWith(
+                                  fontSize: 14,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                'New Arrivals',
+                                style: satoshiRegular.copyWith(
+                                  fontSize: 14,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                'Brands',
+                                style: satoshiRegular.copyWith(
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ],
+                          )
+                  ],
                 ),
               ),
-            ),
-            const Center(
-              child: Row(
+              const Row(
                 children: [
                   Icon(
                     Icons.search_rounded,
@@ -59,8 +104,8 @@ class Navbar extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

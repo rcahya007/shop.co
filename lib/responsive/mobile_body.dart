@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:shop_co/common/global_data.dart';
 import 'package:shop_co/common/widgets/action_button.dart';
@@ -11,7 +10,7 @@ class MyMobileBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber,
+      backgroundColor: colorGray,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -36,11 +35,8 @@ class MyMobileBody extends StatelessWidget {
                     children: [
                       SizedBox(
                         width: 315,
-                        height: 93,
-                        child: AutoSizeText(
+                        child: Text(
                           'FIND CLOTHES THAT MATCHES YOUR STYLE',
-                          minFontSize: 36,
-                          maxFontSize: 50,
                           style: integralBold.copyWith(
                             fontSize: 36,
                             height: 0.85,
@@ -157,65 +153,108 @@ class MyMobileBody extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Center(
-                        child: Image.asset(
-                          'assets/images/modelPerson.png',
-                          height: 448,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
                     ],
                   ),
                 ),
               ),
+              Center(
+                child: Image.asset(
+                  'assets/images/modelPerson.png',
+                  height: 448,
+                  fit: BoxFit.cover,
+                ),
+              ),
               Container(
-                width: MediaQuery.of(context).size.width,
-                padding: const EdgeInsets.symmetric(
-                  vertical: 16,
-                  horizontal: 39,
-                ),
-                decoration: BoxDecoration(
-                  color: colorBlack,
-                ),
-                child: Wrap(
-                  runSpacing: 22.75,
-                  alignment: WrapAlignment.center,
+                  width: MediaQuery.of(context).size.width,
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 39,
+                    horizontal: 16,
+                  ),
+                  decoration: BoxDecoration(
+                    color: colorBlack,
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/versace_logo.png',
+                            height: 21,
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          Image.asset(
+                            'assets/images/zara_logo.png',
+                            height: 20,
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          Image.asset(
+                            'assets/images/gucci_logo.png',
+                            height: 21,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 22.75,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/prada_logo.png',
+                            height: 18,
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          Image.asset(
+                            'assets/images/calvin_klein_logo.png',
+                            height: 21.75,
+                          ),
+                        ],
+                      ),
+                    ],
+                  )),
+              // PAGE NEW ARRIVALS
+              Container(
+                color: colorWhite,
+                child: Column(
                   children: [
-                    Image.asset(
-                      'assets/images/versace_logo.png',
-                      height: 23.25,
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Text(
+                      "New Arrivals",
+                      style: integralBold.copyWith(
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     const SizedBox(
-                      width: 34,
+                      height: 32,
                     ),
-                    Image.asset(
-                      'assets/images/zara_logo.png',
-                      height: 26.65,
-                    ),
-                    const SizedBox(
-                      width: 34,
-                    ),
-                    Image.asset(
-                      'assets/images/gucci_logo.png',
-                      height: 25.24,
-                    ),
-                    const SizedBox(
-                      width: 34,
-                    ),
-                    Image.asset(
-                      'assets/images/prada_logo.png',
-                      height: 21,
-                    ),
-                    const SizedBox(
-                      width: 34,
-                    ),
-                    Image.asset(
-                      'assets/images/calvin_klein_logo.png',
-                      height: 21.75,
+                    ListView.builder(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: 5,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          width: 198,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            color: colorGray,
+                            borderRadius: BorderRadius.circular(13.42),
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),
-              ),
+              )
             ],
           ),
         ),
