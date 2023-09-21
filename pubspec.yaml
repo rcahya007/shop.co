@@ -13,6 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_rating_bar: ^4.0.1
+  infinite_carousel: ^1.0.3
 
 dev_dependencies:
   flutter_lints: ^2.0.0

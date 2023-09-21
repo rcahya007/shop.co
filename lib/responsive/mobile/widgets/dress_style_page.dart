@@ -11,6 +11,7 @@ class DressStylePage extends StatelessWidget {
       color: colorWhite,
       padding: const EdgeInsets.symmetric(
         horizontal: 16,
+        vertical: 50,
       ),
       child: Container(
         padding: const EdgeInsets.only(
@@ -37,10 +38,35 @@ class DressStylePage extends StatelessWidget {
             const SizedBox(
               height: 28,
             ),
-            Image.asset('assets/images/dressStyle1.png'),
-            Image.asset('assets/images/dressStyle2.png'),
-            Image.asset('assets/images/dressStyle3.png'),
-            Image.asset('assets/images/dressStyle4.png'),
+            Image.asset(
+              'assets/images/dressStyle1.png',
+              height: 190,
+              width: 310,
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            Image.asset(
+              'assets/images/dressStyle2.png',
+              height: 190,
+              width: 310,
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            Image.asset(
+              'assets/images/dressStyle3.png',
+              height: 190,
+              width: 310,
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            Image.asset(
+              'assets/images/dressStyle4.png',
+              height: 190,
+              width: 310,
+            ),
           ],
         ),
       ),
