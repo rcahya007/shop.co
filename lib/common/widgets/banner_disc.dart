@@ -19,51 +19,55 @@ class BannerDisc extends StatelessWidget {
   Widget build(BuildContext context) {
     var mediaSize = MediaQuery.of(context).size.width;
     return Container(
+      alignment: Alignment.center,
       decoration: BoxDecoration(
         color: colorBlack,
       ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: 9,
-        ),
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  text ?? '',
-                  style: satoshiRegular.copyWith(
-                    color: colorWhite,
-                    fontSize: mediaSize < mobileWidth ? 12 : 14,
-                  ),
-                ),
-                TextButton(
-                  onPressed: ontap,
-                  child: Text(
-                    textPres ?? '',
-                    style: satoshiBold.copyWith(
+      child: SizedBox(
+        width: 1240,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            vertical: 9,
+          ),
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    text ?? '',
+                    style: satoshiRegular.copyWith(
                       color: colorWhite,
-                      decoration: TextDecoration.underline,
-                      fontSize: 12,
+                      fontSize: mediaSize < mobileWidth ? 12 : 14,
                     ),
                   ),
-                ),
-              ],
-            ),
-            mediaSize < mobileWidth
-                ? const SizedBox()
-                : Positioned(
-                    right: 5,
-                    child: IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.close_rounded,
-                          color: colorWhite,
-                        )),
-                  )
-          ],
+                  TextButton(
+                    onPressed: ontap,
+                    child: Text(
+                      textPres ?? '',
+                      style: satoshiBold.copyWith(
+                        color: colorWhite,
+                        decoration: TextDecoration.underline,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              mediaSize < mobileWidth
+                  ? const SizedBox()
+                  : Positioned(
+                      right: 5,
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.close_rounded,
+                            color: colorWhite,
+                          )),
+                    )
+            ],
+          ),
         ),
       ),
     );
