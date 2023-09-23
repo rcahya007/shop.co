@@ -47,6 +47,9 @@ class ReviewCustomerPage extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(
+            height: 24,
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: 16,
@@ -120,6 +123,9 @@ class ReviewCustomerPage extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(
+            height: 184,
+          )
         ],
       ),
     );

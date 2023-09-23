@@ -5,14 +5,14 @@ class ActionButton extends StatelessWidget {
   Color? colorButton;
   BoxBorder? border;
   VoidCallback onTap;
-  Text? text;
+  Widget? widget;
 
   ActionButton({
     Key? key,
     this.colorButton,
     this.border,
     required this.onTap,
-    this.text,
+    this.widget,
   }) : super(key: key);
 
   @override
@@ -32,7 +32,7 @@ class ActionButton extends StatelessWidget {
             padding: const EdgeInsets.symmetric(
               vertical: 15,
             ),
-            child: text,
+            child: widget,
           ),
         ),
       ),

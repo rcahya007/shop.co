@@ -3,8 +3,8 @@ import 'package:shop_co/common/global_data.dart';
 import 'package:shop_co/common/widgets/action_button.dart';
 import 'package:shop_co/common/widgets/card_item.dart';
 
-class NewArrivalsPage extends StatelessWidget {
-  const NewArrivalsPage({super.key});
+class NewArrivalsTabletPage extends StatelessWidget {
+  const NewArrivalsTabletPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +17,33 @@ class NewArrivalsPage extends StatelessWidget {
         'rating': 4.5,
         'photoUrl': 'assets/images/newArrivals1.png',
         'isDisc': false
+      },
+      {
+        'name': 'Skinny Fit Jeans',
+        'priceDisc': 260,
+        'price': 240,
+        'disc': 20,
+        'rating': 3.5,
+        'photoUrl': 'assets/images/newArrivals2.png',
+        'isDisc': true
+      },
+      {
+        'name': 'Checkered Shirt',
+        'priceDisc': 0,
+        'price': 180,
+        'disc': 0,
+        'rating': 4.5,
+        'photoUrl': 'assets/images/newArrivals3.png',
+        'isDisc': false
+      },
+      {
+        'name': 'Sleeve Striped T-shirt',
+        'priceDisc': 160,
+        'price': 130,
+        'disc': 30,
+        'rating': 4.5,
+        'photoUrl': 'assets/images/newArrivals4.png',
+        'isDisc': true
       },
       {
         'name': 'Skinny Fit Jeans',
@@ -79,18 +106,20 @@ class NewArrivalsPage extends StatelessWidget {
           const SizedBox(
             height: 24,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: ActionButton(
-              onTap: () {},
-              widget: Text(
-                'View All',
-                style: satoshiMedium.copyWith(
-                  fontSize: 14,
+          Center(
+            child: SizedBox(
+              width: 250,
+              child: ActionButton(
+                onTap: () {},
+                widget: Text(
+                  'View All',
+                  style: satoshiMedium.copyWith(
+                    fontSize: 14,
+                  ),
                 ),
-              ),
-              border: Border.all(
-                color: colorBlack.withOpacity(0.1),
+                border: Border.all(
+                  color: colorBlack.withOpacity(0.1),
+                ),
               ),
             ),
           ),

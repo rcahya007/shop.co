@@ -13,6 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_rating_bar: ^4.0.1
+  icons_plus: ^4.0.0
   infinite_carousel: ^1.0.3
 
 dev_dependencies:

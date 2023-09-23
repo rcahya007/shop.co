@@ -57,7 +57,7 @@ class HomePageMobile extends StatelessWidget {
                     color: Colors.transparent,
                   ),
                   colorButton: colorBlack,
-                  text: Text(
+                  widget: Text(
                     'Shop Now',
                     style: satoshiMedium.copyWith(
                       fontSize: 16,

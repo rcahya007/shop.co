@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import 'package:shop_co/common/global_data.dart';
+import 'package:shop_co/responsive/dimensions.dart';
 
 // ignore: must_be_immutable
 class CardItem extends StatelessWidget {
@@ -14,14 +15,16 @@ class CardItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var mediaSize = MediaQuery.of(context).size.width;
+
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: 198,
-            height: 200,
+            width: mediaSize > tabletWidth ? 300 : 198,
+            height: mediaSize > tabletWidth ? 300 : 200,
             decoration: BoxDecoration(
               color: colorGray,
               borderRadius: BorderRadius.circular(13.42),

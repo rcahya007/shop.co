@@ -10,7 +10,7 @@ class Navbar extends StatelessWidget {
     var mediaSize = MediaQuery.of(context).size.width;
     return Container(
       color: Colors.white,
-      height: 64,
+      height: 96,
       alignment: Alignment.center,
       child: SizedBox(
         width: 1240,
@@ -28,77 +28,198 @@ class Navbar extends StatelessWidget {
               SizedBox(
                 width: mediaSize < mobileWidth ? 16 : 0,
               ),
-              Expanded(
-                child: Row(
-                  children: [
-                    Text(
-                      "SHOP.CO",
-                      style: integralBold.copyWith(
-                        fontSize: 25.2,
+              mediaSize > tabletWidth
+                  ? Row(
+                      children: [
+                        Text(
+                          "SHOP.CO",
+                          style: integralBold.copyWith(
+                            fontSize: 25.2,
+                          ),
+                        ),
+                        SizedBox(
+                          width: mediaSize < mobileWidth
+                              ? 20
+                              : mediaSize < tabletWidth
+                                  ? 10
+                                  : 40,
+                        ),
+                        mediaSize < mobileWidth
+                            ? const SizedBox()
+                            : Row(
+                                children: [
+                                  Text(
+                                    'Shop',
+                                    style: satoshiRegular.copyWith(
+                                      fontSize:
+                                          mediaSize < tabletWidth ? 14 : 16,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: mediaSize < tabletWidth ? 10 : 24,
+                                  ),
+                                  Text(
+                                    'On Sale',
+                                    style: satoshiRegular.copyWith(
+                                      fontSize:
+                                          mediaSize < tabletWidth ? 14 : 16,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: mediaSize < tabletWidth ? 10 : 24,
+                                  ),
+                                  Text(
+                                    'New Arrivals',
+                                    style: satoshiRegular.copyWith(
+                                      fontSize:
+                                          mediaSize < tabletWidth ? 14 : 16,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: mediaSize < tabletWidth ? 10 : 24,
+                                  ),
+                                  Text(
+                                    'Brands',
+                                    style: satoshiRegular.copyWith(
+                                      fontSize:
+                                          mediaSize < tabletWidth ? 14 : 16,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 40,
+                                  )
+                                ],
+                              ),
+                      ],
+                    )
+                  : Expanded(
+                      child: Row(
+                        children: [
+                          Text(
+                            "SHOP.CO",
+                            style: integralBold.copyWith(
+                              fontSize: 25.2,
+                            ),
+                          ),
+                          SizedBox(
+                            width: mediaSize < mobileWidth
+                                ? 20
+                                : mediaSize < tabletWidth
+                                    ? 10
+                                    : 40,
+                          ),
+                          mediaSize < mobileWidth
+                              ? const SizedBox()
+                              : Row(
+                                  children: [
+                                    Text(
+                                      'Shop',
+                                      style: satoshiRegular.copyWith(
+                                        fontSize:
+                                            mediaSize < tabletWidth ? 14 : 16,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: mediaSize < tabletWidth ? 10 : 24,
+                                    ),
+                                    Text(
+                                      'On Sale',
+                                      style: satoshiRegular.copyWith(
+                                        fontSize:
+                                            mediaSize < tabletWidth ? 14 : 16,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: mediaSize < tabletWidth ? 10 : 24,
+                                    ),
+                                    Text(
+                                      'New Arrivals',
+                                      style: satoshiRegular.copyWith(
+                                        fontSize:
+                                            mediaSize < tabletWidth ? 14 : 16,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: mediaSize < tabletWidth ? 10 : 24,
+                                    ),
+                                    Text(
+                                      'Brands',
+                                      style: satoshiRegular.copyWith(
+                                        fontSize:
+                                            mediaSize < tabletWidth ? 14 : 16,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      width: 0,
+                                    )
+                                  ],
+                                ),
+                        ],
                       ),
                     ),
-                    SizedBox(
-                      width: mediaSize < mobileWidth ? 20 : 10,
-                    ),
-                    mediaSize < mobileWidth
-                        ? const SizedBox()
-                        : Row(
-                            children: [
-                              Text(
-                                'Shop',
-                                style: satoshiRegular.copyWith(
-                                  fontSize: 14,
+              mediaSize > tabletWidth
+                  ? Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.only(
+                              right: 16,
+                            ),
+                            decoration: BoxDecoration(
+                                color: colorGray,
+                                borderRadius: BorderRadius.circular(62)),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                prefixIcon: const Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 16,
+                                    right: 12,
+                                  ),
+                                  child: Icon(
+                                    Icons.search,
+                                    size: 24,
+                                  ),
+                                ),
+                                prefixIconConstraints: const BoxConstraints(),
+                                hintText: 'Search for products...',
+                                hintStyle: satoshiRegular.copyWith(
+                                  fontSize: 16,
+                                  color: colorBlack.withOpacity(0.4),
                                 ),
                               ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                'On Sale',
-                                style: satoshiRegular.copyWith(
-                                  fontSize: 14,
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                'New Arrivals',
-                                style: satoshiRegular.copyWith(
-                                  fontSize: 14,
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                'Brands',
-                                style: satoshiRegular.copyWith(
-                                  fontSize: 14,
-                                ),
-                              ),
-                            ],
+                            ),
                           )
-                  ],
-                ),
-              ),
-              const Row(
+                        ],
+                      ),
+                    )
+                  : const SizedBox(),
+              Row(
                 children: [
-                  Icon(
-                    Icons.search_rounded,
-                    size: 24,
-                  ),
-                  SizedBox(
-                    width: 12,
-                  ),
-                  Icon(
+                  mediaSize > tabletWidth
+                      ? const SizedBox(
+                          width: 40,
+                        )
+                      : const Row(
+                          children: [
+                            Icon(
+                              Icons.search_rounded,
+                              size: 24,
+                            ),
+                            SizedBox(
+                              width: 12,
+                            ),
+                          ],
+                        ),
+                  const Icon(
                     Icons.shopping_cart_outlined,
                     size: 24,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 12,
                   ),
-                  Icon(
+                  const Icon(
                     Icons.account_circle_outlined,
                     size: 24,
                   ),
