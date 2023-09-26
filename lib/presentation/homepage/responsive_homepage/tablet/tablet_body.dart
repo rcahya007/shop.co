@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:shop_co/common/global_data.dart';
-import 'package:shop_co/common/widgets/action_button.dart';
-import 'package:shop_co/common/widgets/banner_disc.dart';
-import 'package:shop_co/common/widgets/navbar.dart';
-import 'package:shop_co/responsive/tablet/widgets/banner_subscribe_tablet_page.dart';
-import 'package:shop_co/responsive/tablet/widgets/dress_style_tablet_page.dart';
-import 'package:shop_co/responsive/tablet/widgets/footer_tablet_page.dart';
-import 'package:shop_co/responsive/tablet/widgets/home_tablet_page.dart';
-import 'package:shop_co/responsive/tablet/widgets/new_arrivals_tablet_page.dart';
-import 'package:shop_co/responsive/tablet/widgets/review_customer_tablet_page.dart';
-import 'package:shop_co/responsive/tablet/widgets/top_selling_tablet_page.dart';
+import 'package:shop_co/presentation/homepage/responsive_homepage/tablet/widgets/banner_subscribe_tablet_page.dart';
+import 'package:shop_co/presentation/homepage/responsive_homepage/tablet/widgets/dress_style_tablet_page.dart';
+import 'package:shop_co/presentation/homepage/responsive_homepage/tablet/widgets/footer_tablet_page.dart';
+import 'package:shop_co/presentation/homepage/responsive_homepage/tablet/widgets/home_tablet_page.dart';
+import 'package:shop_co/presentation/homepage/responsive_homepage/tablet/widgets/new_arrivals_tablet_page.dart';
+import 'package:shop_co/presentation/homepage/responsive_homepage/tablet/widgets/review_customer_tablet_page.dart';
+import 'package:shop_co/presentation/homepage/responsive_homepage/tablet/widgets/top_selling_tablet_page.dart';
 
 class MyTabletBody extends StatelessWidget {
   const MyTabletBody({super.key});

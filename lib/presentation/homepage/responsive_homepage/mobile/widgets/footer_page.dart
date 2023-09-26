@@ -4,8 +4,8 @@ import 'package:icons_plus/icons_plus.dart';
 
 import 'package:shop_co/common/global_data.dart';
 
-class FooterTabletPage extends StatelessWidget {
-  const FooterTabletPage({super.key});
+class FooterPage extends StatelessWidget {
+  const FooterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -430,6 +430,7 @@ class FooterTabletPage extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class IconSosialMedia extends StatelessWidget {
   Color colorIcon;
   Color colorBorder;

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:shop_co/responsive/dimensions.dart';
+import 'package:shop_co/common/dimensions.dart';
 
-class ResponsiveLayout extends StatelessWidget {
+class DetailProductLayout extends StatelessWidget {
   final Widget mobileBody;
   final Widget tabletBody;
   final Widget desktopBody;
 
-  const ResponsiveLayout({
+  const DetailProductLayout({
     Key? key,
     required this.mobileBody,
     required this.tabletBody,

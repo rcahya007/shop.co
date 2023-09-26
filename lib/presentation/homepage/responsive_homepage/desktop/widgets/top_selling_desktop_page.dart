@@ -8,71 +8,6 @@ class TopSellingDesktopPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List newArrivalsData = [
-      {
-        'name': 'Vertical Striped Shirt',
-        'priceDisc': 232,
-        'price': 212,
-        'disc': 20,
-        'rating': 5.0,
-        'photoUrl': 'assets/images/topSelling1.png',
-        'isDisc': true
-      },
-      {
-        'name': 'Courage Graphic T-shirt',
-        'priceDisc': 0,
-        'price': 145,
-        'disc': 0,
-        'rating': 4.0,
-        'photoUrl': 'assets/images/topSelling2.png',
-        'isDisc': false
-      },
-      {
-        'name': 'Loose Fit Bermuda Shorts',
-        'priceDisc': 0,
-        'price': 80,
-        'disc': 0,
-        'rating': 3.0,
-        'photoUrl': 'assets/images/topSelling3.png',
-        'isDisc': false
-      },
-      {
-        'name': 'Faded Skinny Jeans',
-        'priceDisc': 0,
-        'price': 210,
-        'disc': 0,
-        'rating': 4.5,
-        'photoUrl': 'assets/images/topSelling4.png',
-        'isDisc': false
-      },
-      {
-        'name': 'Vertical Striped Shirt',
-        'priceDisc': 232,
-        'price': 212,
-        'disc': 20,
-        'rating': 5.0,
-        'photoUrl': 'assets/images/topSelling1.png',
-        'isDisc': true
-      },
-      {
-        'name': 'Courage Graphic T-shirt',
-        'priceDisc': 0,
-        'price': 145,
-        'disc': 0,
-        'rating': 4.0,
-        'photoUrl': 'assets/images/topSelling2.png',
-        'isDisc': false
-      },
-      {
-        'name': 'Loose Fit Bermuda Shorts',
-        'priceDisc': 0,
-        'price': 80,
-        'disc': 0,
-        'rating': 3.0,
-        'photoUrl': 'assets/images/topSelling3.png',
-        'isDisc': false
-      },
-    ];
     // PAGE NEW ARRIVALS
     return Container(
       alignment: Alignment.center,
@@ -98,10 +33,10 @@ class TopSellingDesktopPage extends StatelessWidget {
               height: 408,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: newArrivalsData.length,
+                itemCount: dataTopSelling.length,
                 itemBuilder: (context, index) {
                   return CardItem(
-                    data: newArrivalsData.elementAt(index),
+                    data: dataTopSelling.elementAt(index),
                   );
                 },
               ),

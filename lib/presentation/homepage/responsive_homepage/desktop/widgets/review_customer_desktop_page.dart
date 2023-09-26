@@ -2,68 +2,72 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:shop_co/common/global_data.dart';
 
-class ReviewCustomerTabletPage extends StatelessWidget {
-  const ReviewCustomerTabletPage({super.key});
+class ReviewCustomerDesktopPage extends StatelessWidget {
+  const ReviewCustomerDesktopPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       color: colorWhite,
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16,
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Expanded(
-                  child: Text(
-                    'OUR HAPPY CUSTOMERS',
-                    style: integralBold.copyWith(
-                      fontSize: 32,
+      alignment: Alignment.center,
+      child: SizedBox(
+        width: 1240,
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16,
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Expanded(
+                    child: Text(
+                      'OUR HAPPY CUSTOMERS',
+                      style: integralBold.copyWith(
+                        fontSize: 32,
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  width: 8,
-                ),
-                const Row(
-                  children: [
-                    Icon(
-                      Icons.arrow_back_rounded,
-                      size: 24,
-                    ),
-                    SizedBox(
-                      width: 16,
-                    ),
-                    Icon(
-                      Icons.arrow_forward_rounded,
-                      size: 24,
-                    ),
-                  ],
-                ),
-              ],
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  const Row(
+                    children: [
+                      Icon(
+                        Icons.arrow_back_rounded,
+                        size: 24,
+                      ),
+                      SizedBox(
+                        width: 16,
+                      ),
+                      Icon(
+                        Icons.arrow_forward_rounded,
+                        size: 24,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-          const SizedBox(
-            height: 24,
-          ),
-          SizedBox(
-            height: 240,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 5,
-              itemBuilder: (context, index) {
-                return const CardReview();
-              },
+            const SizedBox(
+              height: 24,
             ),
-          ),
-          const SizedBox(
-            height: 184,
-          )
-        ],
+            SizedBox(
+              height: 240,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return const CardReview();
+                },
+              ),
+            ),
+            const SizedBox(
+              height: 184,
+            )
+          ],
+        ),
       ),
     );
   }
@@ -107,9 +111,7 @@ class CardReview extends StatelessWidget {
                 Icons.star,
                 color: Colors.amber,
               ),
-              onRatingUpdate: (rating) {
-                print(rating);
-              },
+              onRatingUpdate: (rating) {},
             ),
             const SizedBox(
               height: 12,

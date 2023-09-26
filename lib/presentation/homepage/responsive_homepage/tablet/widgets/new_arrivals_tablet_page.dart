@@ -8,71 +8,6 @@ class NewArrivalsTabletPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List newArrivalsData = [
-      {
-        'name': 'T-shirt with Tape Details',
-        'priceDisc': 0,
-        'price': 120,
-        'disc': 0,
-        'rating': 4.5,
-        'photoUrl': 'assets/images/newArrivals1.png',
-        'isDisc': false
-      },
-      {
-        'name': 'Skinny Fit Jeans',
-        'priceDisc': 260,
-        'price': 240,
-        'disc': 20,
-        'rating': 3.5,
-        'photoUrl': 'assets/images/newArrivals2.png',
-        'isDisc': true
-      },
-      {
-        'name': 'Checkered Shirt',
-        'priceDisc': 0,
-        'price': 180,
-        'disc': 0,
-        'rating': 4.5,
-        'photoUrl': 'assets/images/newArrivals3.png',
-        'isDisc': false
-      },
-      {
-        'name': 'Sleeve Striped T-shirt',
-        'priceDisc': 160,
-        'price': 130,
-        'disc': 30,
-        'rating': 4.5,
-        'photoUrl': 'assets/images/newArrivals4.png',
-        'isDisc': true
-      },
-      {
-        'name': 'Skinny Fit Jeans',
-        'priceDisc': 260,
-        'price': 240,
-        'disc': 20,
-        'rating': 3.5,
-        'photoUrl': 'assets/images/newArrivals2.png',
-        'isDisc': true
-      },
-      {
-        'name': 'Checkered Shirt',
-        'priceDisc': 0,
-        'price': 180,
-        'disc': 0,
-        'rating': 4.5,
-        'photoUrl': 'assets/images/newArrivals3.png',
-        'isDisc': false
-      },
-      {
-        'name': 'Sleeve Striped T-shirt',
-        'priceDisc': 160,
-        'price': 130,
-        'disc': 30,
-        'rating': 4.5,
-        'photoUrl': 'assets/images/newArrivals4.png',
-        'isDisc': true
-      },
-    ];
     // PAGE NEW ARRIVALS
     return Container(
       color: colorWhite,
@@ -95,10 +30,10 @@ class NewArrivalsTabletPage extends StatelessWidget {
             height: 300,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: newArrivalsData.length,
+              itemCount: dataNewArrivals.length,
               itemBuilder: (context, index) {
                 return CardItem(
-                  data: newArrivalsData.elementAt(index),
+                  data: dataNewArrivals.elementAt(index),
                 );
               },
             ),

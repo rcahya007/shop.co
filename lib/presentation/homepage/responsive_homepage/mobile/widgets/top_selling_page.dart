@@ -3,59 +3,21 @@ import 'package:shop_co/common/global_data.dart';
 import 'package:shop_co/common/widgets/action_button.dart';
 import 'package:shop_co/common/widgets/card_item.dart';
 
-class NewArrivalsPage extends StatelessWidget {
-  const NewArrivalsPage({super.key});
+class TopSellingPage extends StatelessWidget {
+  const TopSellingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List newArrivalsData = [
-      {
-        'name': 'T-shirt with Tape Details',
-        'priceDisc': 0,
-        'price': 120,
-        'disc': 0,
-        'rating': 4.5,
-        'photoUrl': 'assets/images/newArrivals1.png',
-        'isDisc': false
-      },
-      {
-        'name': 'Skinny Fit Jeans',
-        'priceDisc': 260,
-        'price': 240,
-        'disc': 20,
-        'rating': 3.5,
-        'photoUrl': 'assets/images/newArrivals2.png',
-        'isDisc': true
-      },
-      {
-        'name': 'Checkered Shirt',
-        'priceDisc': 0,
-        'price': 180,
-        'disc': 0,
-        'rating': 4.5,
-        'photoUrl': 'assets/images/newArrivals3.png',
-        'isDisc': false
-      },
-      {
-        'name': 'Sleeve Striped T-shirt',
-        'priceDisc': 160,
-        'price': 130,
-        'disc': 30,
-        'rating': 4.5,
-        'photoUrl': 'assets/images/newArrivals4.png',
-        'isDisc': true
-      },
-    ];
     // PAGE NEW ARRIVALS
     return Container(
       color: colorWhite,
       child: Column(
         children: [
           const SizedBox(
-            height: 50,
+            height: 40,
           ),
           Text(
-            "New Arrivals",
+            "TOP SELLING",
             style: integralBold.copyWith(
               fontSize: 32,
               fontWeight: FontWeight.bold,
@@ -68,10 +30,10 @@ class NewArrivalsPage extends StatelessWidget {
             height: 300,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: newArrivalsData.length,
+              itemCount: dataTopSelling.length,
               itemBuilder: (context, index) {
                 return CardItem(
-                  data: newArrivalsData.elementAt(index),
+                  data: dataTopSelling.elementAt(index),
                 );
               },
             ),
@@ -95,11 +57,7 @@ class NewArrivalsPage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 40,
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            child: Divider(),
+            height: 50,
           ),
         ],
       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_co/common/global_data.dart';
-import 'package:shop_co/responsive/dimensions.dart';
+import 'package:shop_co/common/dimensions.dart';
 
 class Navbar extends StatelessWidget {
   const Navbar({super.key});
